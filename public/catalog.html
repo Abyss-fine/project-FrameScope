@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Каталог FrameScope: десять игр, поиск по названию и фильтр по жанру. Выбери игру и параметры своего компьютера.">
+  <meta name="theme-color" content="#111112">
+  <title>Каталог игр — FrameScope</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header" data-site-header></header>
+  <noscript><div class="container py-4"><p>Для каталога и формы включи JavaScript в браузере.</p><nav aria-label="Навигация без JavaScript"><a href="index.html">Главная</a> · <a href="catalog.html">Каталог</a></nav></div></noscript>
+  <main id="main" class="container site-container page-main">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a><span aria-hidden="true">/</span><span aria-current="page">Каталог игр</span></nav>
+    <header class="page-heading"><p class="eyebrow">Найди свой следующий мир</p><h1>Каталог <span>игр.</span></h1><p>От знакомых миров до новых историй. Выбери игру, чтобы настроить свою конфигурацию.</p></header>
+    <section aria-label="Поиск и фильтры каталога" class="panel catalog-filters">
+      <div class="row g-3 align-items-end">
+        <div class="col-12 col-md-7"><label for="game-search" class="form-label">Поиск по названию</label><input id="game-search" class="form-control" type="search" placeholder="Например, Control" autocomplete="off"></div>
+        <div class="col-12 col-md-5"><label for="genre-filter" class="form-label">Жанр</label><select id="genre-filter" class="form-select"><option value="">Все жанры</option></select></div>
+      </div>
+    </section>
+    <div class="catalog-meta"><p data-game-count role="status" aria-live="polite">Загрузка каталога…</p><span>Каталог из базы данных</span></div>
+    <p class="art-disclaimer">Изображения — оригинальные иллюстрации-заглушки, а не официальные обложки игр.</p>
+    <div class="row g-4" data-catalog-grid></div>
+    <section class="panel empty-catalog" data-empty-catalog hidden aria-labelledby="empty-title"><p class="eyebrow">Попробуем ещё раз</p><h2 id="empty-title">Игры не найдены</h2><p>Измени название или выбери другой жанр.</p><button class="btn btn-outline-light" type="button" data-reset-filters>Сбросить фильтры</button></section>
+  </main>
+  <footer class="site-footer" data-site-footer></footer>
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script type="module" src="assets/js/catalog.js"></script>
+</body>
+</html>

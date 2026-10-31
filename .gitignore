@@ -1,0 +1,11 @@
+node_modules/
+.playwright/
+test-results/
+*.log
+.env
+.env.*
+!.env.example
+data/*.sqlite*
+data/raw/
+data/import-report.json
+test-artifacts/

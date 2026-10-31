@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Информация об игре и выбор конфигурации ПК в FrameScope. Результаты из базы бенчмарков при совпадении параметров.">
+  <meta name="theme-color" content="#111112">
+  <title>Страница игры — FrameScope</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header" data-site-header></header>
+  <noscript><div class="container py-4"><p>Для каталога и формы включи JavaScript в браузере.</p><nav aria-label="Навигация без JavaScript"><a href="index.html">Главная</a> · <a href="catalog.html">Каталог</a></nav></div></noscript>
+  <main id="main" class="container site-container page-main">
+    <section class="panel not-found" data-game-not-found hidden><p class="eyebrow">Такого мира здесь пока нет</p><h1>Игра не найдена</h1><p>Ссылка неполная или такой игры нет в каталоге. Выбери одну из доступных игр.</p><a class="btn btn-primary" href="catalog.html">Открыть каталог <span aria-hidden="true">→</span></a></section>
+    <div data-game-content hidden>
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a><span aria-hidden="true">/</span><a href="catalog.html">Каталог</a><span aria-hidden="true">/</span><span data-game-breadcrumb aria-current="page"></span></nav>
+      <section class="game-intro row g-4 g-xl-5 align-items-center" aria-labelledby="game-title">
+        <div class="col-12 col-lg-6"><div class="game-cover"><img data-game-image width="640" height="360" alt=""><span class="art-label">Авторская иллюстрация-заглушка</span></div></div>
+        <div class="col-12 col-lg-6"><p class="eyebrow" data-game-genre></p><h1 id="game-title" data-game-title></h1><p class="game-description" data-game-description></p><p class="release-date" data-game-release></p><p class="form-note" data-game-edition></p><a class="text-link" data-game-source target="_blank" rel="noopener noreferrer">Источник: страница игры <span aria-hidden="true">↗</span></a></div>
+      </section>
+      <section class="panel setup-panel" id="check-fps" aria-labelledby="setup-title">
+        <div class="section-heading"><div><p class="eyebrow">Твоя игра. Твои настройки.</p><h2 id="setup-title">Настрой конфигурацию ПК</h2><p>Укажи комплектующие и параметры графики для этой игры.</p></div></div>
+        <div data-pc-form></div>
+      </section>
+      <section class="panel results-panel" data-results aria-labelledby="results-title">
+  <div class="section-heading"><div><p class="eyebrow">Результат анализа</p><h2 id="results-title">Производительность в деталях</h2></div><span class="status-label" data-result-state>Ожидает расчёта</span></div>
+  <div class="row g-4 align-items-stretch">
+    <div class="col-12 col-lg-7">
+      <div class="metrics">
+        <div class="metric"><span>Средний FPS</span><strong>— <small>FPS</small></strong></div>
+        <div class="metric"><span>1% Low</span><strong>— <small>FPS</small></strong></div>
+        <div class="metric"><span>Загрузка GPU</span><strong>— <small>%</small></strong></div>
+        <div class="metric"><span>Загрузка CPU</span><strong>— <small>%</small></strong></div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-5"><div class="result-summary" data-result-summary><p class="result-summary-title">Основа оценки</p><p>Бенчмарк или прогноз появится после расчёта.</p></div></div>
+  </div>
+  <div class="result-message" data-result-message role="status" aria-live="polite">Выбери конфигурацию, чтобы получить оценку производительности.</div>
+</section>
+    </div>
+  </main>
+  <footer class="site-footer" data-site-footer></footer>
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script type="module" src="assets/js/game.js"></script>
+</body>
+</html>
